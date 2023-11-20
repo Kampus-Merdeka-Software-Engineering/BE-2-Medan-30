@@ -1,0 +1,9 @@
+{
+  "name": "medan-30-news-api",
+  "version": "1.0.0",
+  "description": "API for Medan 30 news Website",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "license":"ISC"
+}
