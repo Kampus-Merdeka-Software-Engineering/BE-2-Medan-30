@@ -1,0 +1,218 @@
+[
+  {
+    "id": 1,
+    "title": "Groundbreaking Research Reveals Potential Cure for Common Cold",
+    "slug": "groundbreaking-research-cure-common-cold",
+    "category_id": 1,
+    "category": "Health",
+    "thumbnail": "https://example.com/thumbnails/cold_cure.jpg",
+    "thumbnail_description": "Scientific research in a laboratory",
+    "content": "Scientists have made a major breakthrough in the quest for a cure for the common cold. The new treatment, which targets the virus at its source, could revolutionize how we approach and manage respiratory infections.",
+    "created_at": "2023-11-22T08:00:00Z"
+  },
+  {
+    "id": 2,
+    "title": "SpaceX Launches Innovative Satellite to Monitor Climate Change",
+    "slug": "spacex-launches-satellite-monitor-climate-change",
+    "category": "Science", 
+    "category_id": 2,
+    "thumbnail": "https://example.com/thumbnails/spacex_climate_satellite.jpg",
+    "thumbnail_description": "SpaceX rocket launching into space",
+    "content": "In a bid to enhance global efforts in monitoring climate change, SpaceX successfully launched a state-of-the-art satellite equipped with advanced sensors. The satellite is expected to provide crucial data for climate scientists and policymakers.",
+    "created_at": "2023-11-21T15:30:00Z"
+  },
+  {
+    "id": 3,
+    "title": "New Art Installation Transforms Cityscape into a Canvas of Light",
+    "slug": "art-installation-transforms-cityscape-into-light-canvas",
+    "category": "Arts", "category_id": 3,
+    "thumbnail": "https://example.com/thumbnails/light_art_installation.jpg",
+    "thumbnail_description": "Cityscape illuminated by colorful lights",
+    "content": "A captivating art installation has turned the city into a mesmerizing display of light and color. This immersive experience aims to bring joy and creativity to urban spaces, turning ordinary landscapes into extraordinary works of art.",
+    "created_at": "2023-11-20T18:45:00Z"
+  },
+  {
+    "id": 4,
+    "title": "Tech Company Launches Eco-Friendly Smartphone Made from Recycled Materials",
+    "slug": "tech-company-launches-eco-friendly-smartphone",
+    "category": "Technology", "category_id": 4,
+    "thumbnail": "https://example.com/thumbnails/eco_friendly_smartphone.jpg",
+    "thumbnail_description": "Close-up of a sustainable smartphone",
+    "content": "In a bid to reduce electronic waste, a tech company has introduced a cutting-edge smartphone made entirely from recycled materials. The device boasts impressive features while promoting sustainability in the tech industry.",
+    "created_at": "2023-11-19T12:15:00Z"
+  },
+  {
+    "id": 5,
+    "title": "World-renowned Chef Reveals Secret Ingredient for Perfect Thanksgiving Feast",
+    "slug": "chef-reveals-secret-ingredient-thanksgiving-feast",
+    "category": "Food", "category_id": 5,
+    "thumbnail": "https://example.com/thumbnails/chef_thanksgiving_recipe.jpg",
+    "thumbnail_description": "Chef preparing a delicious Thanksgiving meal",
+    "content": "In an exclusive interview, a world-renowned chef shares the secret ingredient that takes Thanksgiving dishes to the next level. Food enthusiasts are eager to incorporate this culinary tip into their holiday feasts.",
+    "created_at": "2023-11-18T09:30:00Z"
+  },
+  {
+    "id": 6,
+    "title": "Scientists Discover Ancient Fossilized Forest Under Antarctic Ice",
+    "slug": "ancient-fossilized-forest-under-antarctic-ice",
+    "category": "Science", 
+    "category_id": 2,
+    "thumbnail": "https://example.com/thumbnails/antarctic_fossil_forest.jpg",
+    "thumbnail_description": "Researchers examining fossilized tree stumps",
+    "content": "In a surprising find, scientists have uncovered the remnants of an ancient forest beneath the Antarctic ice. The discovery provides new insights into Earth's prehistoric climate and the adaptability of plant life.",
+    "created_at": "2023-11-17T14:00:00Z"
+  },
+  {
+    "id": 7,
+    "title": "Virtual Reality Therapy Shows Promise in Treating Phobias",
+    "slug": "virtual-reality-therapy-treat-phobias",
+    "category_id": 1,
+    "category": "Health",
+    "thumbnail": "https://example.com/thumbnails/virtual_reality_therapy.jpg",
+    "thumbnail_description": "Person using virtual reality headset",
+    "content": "A groundbreaking study suggests that virtual reality therapy could be an effective treatment for various phobias. Patients using VR technology reported significant reductions in fear and anxiety levels.",
+    "created_at": "2023-11-16T11:45:00Z"
+  },
+  {
+    "id": 8,
+    "title": "World's Largest Urban Farm Opens in the Heart of the City",
+    "slug": "largest-urban-farm-opens-in-city",
+    "category": "Environment", 
+    "category_id": 6,
+    "thumbnail": "https://example.com/thumbnails/urban_farm_city.jpg",
+    "thumbnail_description": "Aerial view of the expansive urban farm",
+    "content": "An ambitious urban farming project has come to fruition with the opening of the world's largest urban farm in the heart of the city. The initiative aims to promote sustainable agriculture and food production within urban spaces.",
+    "created_at": "2023-11-15T16:30:00Z"
+  },
+  {
+    "id": 9,
+    "title": "Artificial Intelligence Predicts Breakthroughs in Cancer Research",
+    "slug": "ai-predicts-breakthroughs-cancer-research",
+    "category": "Technology", 
+    "category_id": 4,
+    "thumbnail": "https://example.com/thumbnails/ai_cancer_research.jpg",
+    "thumbnail_description": "Artificial intelligence concept",
+    "content": "Cutting-edge artificial intelligence algorithms are now predicting potential breakthroughs in cancer research. The technology analyzes vast datasets to identify patterns and potential treatment options, accelerating progress in the field.",
+    "created_at": "2023-11-14T09:15:00Z"
+  },
+  {
+    "id": 10,
+    "title": "Rare Celestial Event to Illuminate the Night Sky Next Month",
+    "slug": "rare-celestial-event-illuminate-night-sky",
+    "category": "Environment", "category_id": 7,
+    "thumbnail": "https://example.com/thumbnails/celestial_event_night_sky.jpg",
+    "thumbnail_description": "Starry night sky with celestial event",
+    "content": "A rare celestial event is set to captivate stargazers next month as a comet makes its closest approach to Earth in decades. Astronomers are anticipating a spectacular display in the night sky visible to the naked eye.",
+    "created_at": "2023-11-13T20:00:00Z"
+  },
+  {
+    "id": 11,
+    "title": "Breakthrough in Renewable Energy: Solar Panels That Generate Power in the Rain",
+    "slug": "breakthrough-renewable-energy-solar-panels-generate-power-in-rain",
+    "category": "Science", 
+    "category_id": 2,
+    "thumbnail": "https://example.com/thumbnails/solar_panels_rain.jpg",
+    "thumbnail_description": "Close-up of raindrops on solar panels",
+    "content": "Scientists have developed innovative solar panels that can generate power even during rainy weather. This breakthrough could significantly enhance the efficiency of solar energy capture in regions with frequent rainfall.",
+    "created_at": "2023-11-12T12:45:00Z"
+  },
+  {
+    "id": 12,
+    "title": "New Technology Allows for Real-time Translation of Animal Sounds",
+    "slug": "technology-real-time-translation-animal-sounds",
+    "category": "Technology", 
+    "category_id": 4,
+    "thumbnail": "https://example.com/thumbnails/animal_translation_technology.jpg",
+    "thumbnail_description": "Illustration of a device translating animal sounds",
+    "content": "In a remarkable fusion of technology and biology, a new device can translate animal sounds in real-time. Researchers believe this breakthrough will deepen our understanding of animal communication and behavior.",
+    "created_at": "2023-11-11T15:30:00Z"
+  },
+  {
+    "id": 13,
+    "title": "Futuristic Floating City Prototype Unveiled for Climate-Change Resilient Living",
+    "slug": "floating-city-prototype-unveiled-climate-change-resilient-living",
+    "category": "Environment", 
+    "category_id": 6,
+    "thumbnail": "https://example.com/thumbnails/floating_city_prototype.jpg",
+    "thumbnail_description": "Conceptual image of a floating city",
+    "content": "Architects and engineers have unveiled a prototype for a futuristic floating city designed to be resilient in the face of climate change and rising sea levels. The project aims to explore innovative solutions for sustainable urban living.",
+    "created_at": "2023-11-10T18:00:00Z"
+  },
+  {
+    "id": 14,
+    "title": "Renowned Author's Unpublished Manuscript Discovered Decades After Their Passing",
+    "slug": "authors-unpublished-manuscript-discovered-decades-later",
+    "category": "Arts", 
+    "category_id": 3,
+    "thumbnail": "https://example.com/thumbnails/unpublished_manuscript.jpg",
+    "thumbnail_description": "Old typewriter and manuscript pages",
+    "content": "In a literary discovery that has captivated the literary world, an unpublished manuscript by a renowned author has been found decades after their passing. The work offers new insights into the author's creative process and storytelling.",
+    "created_at": "2023-11-09T11:15:00Z"
+  },
+  {
+    "id": 15,
+    "title": "Revolutionary Transportation System Proposes Hyperloop Connection Between Cities",
+    "slug": "revolutionary-transportation-system-hyperloop-connection",
+    "category": "Technology", 
+    "category_id": 4,
+    "thumbnail": "https://example.com/thumbnails/hyperloop_transportation.jpg",
+    "thumbnail_description": "Conceptual image of a Hyperloop system",
+    "content": "A visionary transportation project is gaining traction, proposing a Hyperloop system that could revolutionize travel between cities. The high-speed, tube-based transportation system promises to drastically reduce travel times.",
+    "created_at": "2023-11-08T14:45:00Z"
+  },
+  {
+    "id": 16,
+    "title": "Culinary Exploration: Chef Creates Exquisite Dishes Using Insects as Key Ingredients",
+    "slug": "culinary-exploration-chef-creates-dishes-using-insects",
+    "category": "Food", 
+    "category_id": 5,
+    "thumbnail": "https://example.com/thumbnails/chef_insect_cuisine.jpg",
+    "thumbnail_description": "Chef preparing a gourmet insect dish",
+    "content": "A daring chef is turning culinary norms on their head by incorporating insects as key ingredients in exquisite dishes. The innovative approach aims to promote sustainable and protein-rich food sources.",
+    "created_at": "2023-11-07T09:30:00Z"
+  },
+  {
+    "id": 17,
+    "title": "AI-Powered Robot Assists in Archaeological Excavation, Unearths Ancient Artifacts",
+    "slug": "ai-powered-robot-assists-archaeological-excavation-unearths-artifacts",
+    "category": "Science", 
+    "category_id": 2,
+    "thumbnail": "https://example.com/thumbnails/ai_robot_archaeology.jpg",
+    "thumbnail_description": "Robot assisting in archaeological dig",
+    "content": "An AI-powered robot has joined archaeological teams, significantly accelerating excavation processes and uncovering previously undiscovered ancient artifacts. The integration of technology is reshaping the field of archaeology.",
+    "created_at": "2023-11-06T16:00:00Z"
+  },
+  {
+    "id": 18,
+    "title": "Interactive Art Installation Lets Visitors Control City Lights with Their Movements",
+    "slug": "interactive-art-installation-control-city-lights-with-movements",
+    "category": "Arts", 
+    "category_id": 3,
+    "thumbnail": "https://example.com/thumbnails/interactive_light_installation.jpg",
+    "thumbnail_description": "Participants interacting with light installation",
+    "content": "A cutting-edge art installation invites visitors to control city lights through their movements. The interactive experience blurs the line between art and technology, creating a dynamic and engaging urban space.",
+    "created_at": "2023-11-05T18:30:00Z"
+  },
+  {
+    "id": 19,
+    "title": "Breakthrough in Quantum Computing: New Algorithm Achieves Unprecedented Speeds",
+    "slug": "breakthrough-quantum-computing-algorithm-unprecedented-speeds",
+    "category": "Technology", 
+    "category_id": 4,
+    "thumbnail": "https://example.com/thumbnails/quantum_computing_algorithm.jpg",
+    "thumbnail_description": "Illustration of quantum computing processes",
+    "content": "Scientists have developed a groundbreaking quantum computing algorithm that achieves unprecedented processing speeds. This advancement brings us closer to unlocking the full potential of quantum computers for complex problem-solving.",
+    "created_at": "2023-11-04T12:00:00Z"
+  },
+  {
+    "id": 20,
+    "title": "Innovative Urban Farming Initiative Transforms Abandoned Factories into Green Spaces",
+    "slug": "urban-farming-initiative-transforms-abandoned-factories-into-green-spaces",
+    "category": "Environment", 
+    "category_id": 6,
+    "thumbnail": "https://example.com/thumbnails/urban_farming_factory.jpg",
+    "thumbnail_description": "Transformed abandoned factory into a green space",
+    "content": "An innovative urban farming initiative is repurposing abandoned factories into vibrant green spaces. The project not only revitalizes neglected areas but also contributes to sustainable food production in urban environments.",
+    "created_at": "2023-11-03T15:45:00Z"
+  }
+]

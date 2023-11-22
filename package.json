@@ -5,6 +5,7 @@
   "scripts": {
     "start": "node server.js"
   },
+  "type": "module",
   "author": "tengkudavyan@gmail.com",
   "license": "ISC",
   "dependencies": {

@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "news_id": 1,
+    "name": "Alice",
+    "comment": "This breakthrough in common cold research is amazing! Kudos to the scientists!",
+    "created_at": "2023-11-22T10:30:00Z"
+  },
+  {
+    "id": 2,
+    "news_id": 1,
+    "name": "Bob",
+    "comment": "I'm curious to learn more about the specific details of the new treatment. Exciting times for medical science!",
+    "created_at": "2023-11-22T11:15:00Z"
+  },
+  {
+    "id": 3,
+    "news_id": 2,
+    "name": "Charlie",
+    "comment": "SpaceX continues to push the boundaries of space exploration. The climate monitoring satellite sounds like a game-changer.",
+    "created_at": "2023-11-21T16:45:00Z"
+  },
+  {
+    "id": 4,
+    "news_id": 2,
+    "name": "Diana",
+    "comment": "I can't wait to see the data the new satellite will provide. Space technology is advancing so quickly!",
+    "created_at": "2023-11-21T18:00:00Z"
+  },
+  {
+    "id": 5,
+    "news_id": 3,
+    "name": "Evan",
+    "comment": "The art installation transforming cityscapes into light canvases is breathtaking. It adds so much vibrancy to urban areas!",
+    "created_at": "2023-11-20T19:30:00Z"
+  },
+  {
+    "id": 6,
+    "news_id": 3,
+    "name": "Fiona",
+    "comment": "Art that engages with the city and its people is so impactful. I hope to see more projects like this.",
+    "created_at": "2023-11-20T20:45:00Z"
+  },
+  {
+    "id": 7,
+    "news_id": 4,
+    "name": "George",
+    "comment": "An eco-friendly smartphone made from recycled materials is a step in the right direction. It's about time tech companies prioritize sustainability.",
+    "created_at": "2023-11-19T13:45:00Z"
+  },
+  {
+    "id": 8,
+    "news_id": 4,
+    "name": "Hannah",
+    "comment": "I hope more companies follow suit. We need more environmentally conscious products in the market.",
+    "created_at": "2023-11-19T15:00:00Z"
+  },
+  {
+    "id": 9,
+    "news_id": 5,
+    "name": "Ian",
+    "comment": "The secret ingredient for a perfect Thanksgiving feast has me intrigued! Can't wait to try it out.",
+    "created_at": "2023-11-18T10:00:00Z"
+  },
+  {
+    "id": 10,
+    "news_id": 5,
+    "name": "Jessica",
+    "comment": "Thanksgiving is my favorite holiday. Any tips from a world-renowned chef are welcome!",
+    "created_at": "2023-11-18T11:30:00Z"
+  }
+]
