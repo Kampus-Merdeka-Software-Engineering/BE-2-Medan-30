@@ -1,6 +1,6 @@
 import categoriesData from "../dummy/categories.json" assert { type: "json" };
 
-export const getCategories = (limit) => {
+export const getCategories = ({ limit }) => {
   let categories = categoriesData;
 
   if (limit) {
