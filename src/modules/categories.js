@@ -1,4 +1,9 @@
 import categoriesData from "../dummy/categories.json" assert { type: "json" };
+import { Categories } from "./database.js";
+export const createCategoriesBulk = async (categories) => {
+  const createdCategories = await Categories.bulkCreate(categories);
+  return createdCategories;
+};
 
 export const getCategories = ({ limit }) => {
   let categories = categoriesData;

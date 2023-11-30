@@ -2,25 +2,71 @@ import newsData from "../dummy/news.json" assert { type: "json" };
 import recommendationData from "../dummy/recommendation.json" assert { type: "json" };
 import trendingData from "../dummy/trending.json" assert { type: "json" };
 import { sortCreatedAt } from "../utils/date.js";
+import { Categories, News } from "./database.js";
+import { slugify } from "../utils/string.js";
 
-export const getNews = ({ category_id, limit }) => {
-  let news = newsData;
+export const createNews = async ({
+  title,
+  category_id,
+  thumbnail,
+  thumbnail_description,
+  content,
+}) => {
+  const newNews = News.build({
+    title,
+    slug: slugify(title),
+    category_id,
+    thumbnail,
+    thumbnail_description,
+    content,
+  });
+
+  return await newNews;
+};
+
+export const createNewsBulk = async (news) => {
+  const bulkNews = News.bulkCreate(
+    news.map((n) => ({ ...n, slug: slugify(n.title) }))
+  );
+
+  return await bulkNews;
+};
+
+export const getNews = async ({ category_id, limit }) => {
+  const filter = {};
 
   // Filter Category
   if (category_id) {
-    news = news.filter((news) => news.category_id === category_id);
+    filter.category_id = category_id;
   }
 
-  // Filter Limit
-  if (limit) {
-    news = news.slice(0, limit);
-  }
+  let news = await News.findAll({
+    order: [["createdAt", "DESC"]],
+    limit: limit || 25,
+    where: filter,
+    include: [
+      {
+        model: Categories,
+        as: "category",
+      },
+    ],
+  });
 
-  return news.sort(sortCreatedAt);
+  return news;
 };
 
-export const getNewsByID = (news_id) => {
-  const news = newsData.find((news) => news.id === news_id);
+export const getNewsByID = async (news_id) => {
+  let news = await News.findOne({
+    where: {
+      id: news_id,
+    },
+    include: [
+      {
+        model: Categories,
+        as: "category",
+      },
+    ],
+  });
 
   if (!news) {
     return "News Not Found!";

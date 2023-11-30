@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "API for Medan 30 news Website",
   "scripts": {
-    "start": "node server.js"
+    "start": "node index.js"
   },
   "type": "module",
   "author": "tengkudavyan@gmail.com",

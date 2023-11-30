@@ -1,24 +1,22 @@
 import { Sequelize, DataTypes } from "sequelize";
-import dotenv from "dotenv";
+import {} from "dotenv/config";
 
-dotenv.config();
+console.log(
+  process.env.DATABASE_NAME,
+  process.env.DATABASE_USER,
+  process.env.DATABASE_PASSWORD,
+  process.env.DATABASE_HOST
+);
 
 const sequelize = new Sequelize(
-  process.env.DATABASE,
-  process.env.USER,
-  process.env.PASSWORD,
+  process.env.DATABASE_NAME,
+  process.env.DATABASE_USER,
+  process.env.DATABASE_PASSWORD,
   {
-    host: process.env.HOST,
+    host: process.env.DATABASE_HOST,
     dialect: "mysql",
   }
 );
-
-try {
-  await sequelize.authenticate();
-  console.log("Connection has been established successfully.");
-} catch (error) {
-  console.error("Unable to connect to the database:", error);
-}
 
 const News = sequelize.define("News", {
   id: {
@@ -37,8 +35,9 @@ const News = sequelize.define("News", {
     unique: true,
   },
   category_id: {
-    type: DataTypes.INTEGER,
+    type: DataTypes.UUID,
     allowNull: false,
+    foreignKey: true,
   },
   thumbnail: {
     type: DataTypes.STRING,
@@ -67,7 +66,7 @@ const Categories = sequelize.define("Categories", {
   },
 });
 
-const Comments = sequalize.define("Comments", {
+const Comments = sequelize.define("Comments", {
   id: {
     type: DataTypes.UUID,
     defaultValue: DataTypes.UUIDV4,
@@ -77,6 +76,7 @@ const Comments = sequalize.define("Comments", {
   news_id: {
     type: DataTypes.INTEGER,
     allowNull: false,
+    foreignKey: true,
   },
   name: {
     type: DataTypes.STRING,
@@ -88,7 +88,7 @@ const Comments = sequalize.define("Comments", {
   },
 });
 
-const Recommendation = sequalize.defind("Recommendations", {
+const Recommendation = sequelize.define("Recommendations", {
   id: {
     type: DataTypes.UUID,
     defaultValue: DataTypes.UUIDV4,
@@ -96,17 +96,47 @@ const Recommendation = sequalize.defind("Recommendations", {
     primaryKey: true,
   },
   category_id: {
-    type: DataTypes.INTEGER,
+    type: DataTypes.UUID,
     allowNull: false,
+    foreignKey: true,
   },
   news_id: {
+    type: DataTypes.UUID,
+    allowNull: false,
+    foreignKey: true,
+  },
+});
+
+const Trending = sequelize.define("Trending", {
+  id: {
+    type: DataTypes.UUID,
+    defaultValue: DataTypes.UUIDV4,
+    allowNull: false,
+    primaryKey: true,
+  },
+  news_id: {
+    type: DataTypes.UUID,
+    allowNull: false,
+    foreignKey: true,
+  },
+  trending_rank: {
     type: DataTypes.INTEGER,
     allowNull: false,
   },
 });
 
+// News & Categories
+Categories.hasMany(News, {
+  foreignKey: "category_id",
+});
+News.belongsTo(Categories, {
+  foreignKey: "category_id",
+  targetKey: "id",
+  as: "category",
+});
+
 (async () => {
-  await sequelize.sync();
+  await sequelize.sync({ alter: true });
 })();
 
-export { sequelize, News, Categories };
+export { sequelize, News, Categories, Comments, Recommendation, Trending };

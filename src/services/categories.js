@@ -1,4 +1,13 @@
-import { getCategories, getCategoryByID } from "../modules/categories.js";
+import {
+  getCategories,
+  getCategoryByID,
+  createCategoriesBulk,
+} from "../modules/categories.js";
+
+export const createCategoriesBulkService = async (req, res) => {
+  const createdCategories = await createCategoriesBulk(req.body);
+  res.json(createdCategories);
+};
 
 export const getCategoriesService = (req, res) => {
   const categories = getCategories({ limit: Number(req.query.limit) });

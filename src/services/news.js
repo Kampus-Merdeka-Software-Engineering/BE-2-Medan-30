@@ -1,13 +1,15 @@
 import {
+  createNews,
   getNews,
   getNewsByID,
   getNewsBySlug,
   getNewsSearchByTitle,
+  createNewsBulk,
 } from "../modules/news.js";
 import { getCommentsByNewsID } from "../modules/comments.js";
 
-export const getNewsService = (req, res) => {
-  const news = getNews({
+export const getNewsService = async (req, res) => {
+  const news = await getNews({
     category_id: Number(req.query.category_id),
     limit: Number(req.query.limit),
   });
@@ -23,8 +25,8 @@ export const getNewsBySearchService = (req, res) => {
   res.send(news);
 };
 
-export const getNewsByIDService = (req, res) => {
-  const news = getNewsByID(Number(req.params.news_id));
+export const getNewsByIDService = async (req, res) => {
+  const news = await getNewsByID(Number(req.params.news_id));
   res.send(news);
 };
 
@@ -39,4 +41,16 @@ export const getNewsCommentsService = (req, res) => {
     limit: Number(req.query.limit),
   });
   res.send(comments);
+};
+
+export const createNewsService = async (req, res) => {
+  const createdNews = await createNews(req.body);
+
+  res.json(createdNews);
+};
+
+export const createNewsBulkService = async (req, res) => {
+  const createdNews = await createNewsBulk(req.body);
+
+  res.json(createdNews);
 };
