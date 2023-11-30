@@ -13,7 +13,7 @@ router.forEach(({ path, method, handler }) => {
   app[method](path, handler);
 });
 
-app.listen(port, async () => {
+app.listen(port, "0.0.0.0", async () => {
   try {
     await sequelize.authenticate();
     console.log("Connection has been established successfully.");
