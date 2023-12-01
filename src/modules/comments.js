@@ -1,15 +1,13 @@
-import commentsData from "../dummy/comments.json" assert { type: "json" };
+import { Comments } from "./database.js";
 
-export const getCommentsByNewsID = ({ news_id, limit }) => {
-  let comments = commentsData;
-
-  if (news_id) {
-    comments = comments.filter((comment) => comment.news_id === news_id);
-  }
-
-  if (limit) {
-    comments = comments.slice(0, limit);
-  }
+export const getCommentsByNewsID = async ({ news_id, limit }) => {
+  const comments = await Comments.findAll({
+    order: [["createdAt", "DESC"]],
+    where: {
+      news_id: news_id,
+    },
+    limit: limit || 25,
+  });
 
   return comments;
 };

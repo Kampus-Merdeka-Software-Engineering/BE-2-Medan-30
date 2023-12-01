@@ -13,6 +13,8 @@ import {
   getNewsCommentsService,
   getNewsService,
 } from "./src/services/news.js";
+import { createRecommendationBulkService } from "./src/services/recommendation.js";
+import { createTrendingBulkService } from "./src/services/trending.js";
 
 const router = [
   {
@@ -61,6 +63,26 @@ const router = [
     path: "/categories/:id",
     method: "get",
     handler: getCategoryByIDService,
+  },
+  // {
+  //   path: "/comments/create/bulk",
+  //   method: "post",
+  //   handler: () => {},
+  // },
+  // {
+  //   path: "/comments/create",
+  //   method: "post",
+  //   handler: () => {},
+  // },
+  {
+    path: "/recommendation/create/bulk",
+    method: "post",
+    handler: createRecommendationBulkService,
+  },
+  {
+    path: "/trending/create/bulk",
+    method: "post",
+    handler: createTrendingBulkService,
   },
 ];
 

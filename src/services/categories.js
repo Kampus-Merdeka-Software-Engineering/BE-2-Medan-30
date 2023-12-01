@@ -9,12 +9,12 @@ export const createCategoriesBulkService = async (req, res) => {
   res.json(createdCategories);
 };
 
-export const getCategoriesService = (req, res) => {
-  const categories = getCategories({ limit: Number(req.query.limit) });
+export const getCategoriesService = async (req, res) => {
+  const categories = await getCategories({ limit: Number(req.query.limit) });
   res.send(categories);
 };
 
-export const getCategoryByIDService = (req, res) => {
-  const category = getCategoryByID(Number(req.params.id));
+export const getCategoryByIDService = async (req, res) => {
+  const category = await getCategoryByID(Number(req.params.id));
   res.send(category);
 };

@@ -17,8 +17,8 @@ export const getNewsService = async (req, res) => {
   res.send(news);
 };
 
-export const getNewsBySearchService = (req, res) => {
-  const news = getNewsSearchByTitle({
+export const getNewsBySearchService = async (req, res) => {
+  const news = await getNewsSearchByTitle({
     keyword: req.query.keyword,
     limit: Number(req.query.limit),
   });
@@ -30,13 +30,13 @@ export const getNewsByIDService = async (req, res) => {
   res.send(news);
 };
 
-export const getNewsBySlugService = (req, res) => {
-  const news = getNewsBySlug(req.params.slug);
+export const getNewsBySlugService = async (req, res) => {
+  const news = await getNewsBySlug(req.params.slug);
   res.send(news);
 };
 
-export const getNewsCommentsService = (req, res) => {
-  const comments = getCommentsByNewsID({
+export const getNewsCommentsService = async (req, res) => {
+  const comments = await getCommentsByNewsID({
     news_id: Number(req.params.id),
     limit: Number(req.query.limit),
   });

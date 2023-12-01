@@ -75,7 +75,7 @@ const Comments = sequelize.define("Comments", {
     primaryKey: true,
   },
   news_id: {
-    type: DataTypes.INTEGER,
+    type: DataTypes.UUID,
     allowNull: false,
     foreignKey: true,
   },
@@ -108,7 +108,7 @@ const Recommendation = sequelize.define("Recommendations", {
   },
 });
 
-const Trending = sequelize.define("Trending", {
+const Trendings = sequelize.define("Trendings", {
   id: {
     type: DataTypes.UUID,
     defaultValue: DataTypes.UUIDV4,
@@ -136,8 +136,37 @@ News.belongsTo(Categories, {
   as: "category",
 });
 
+// News & Comments
+News.hasMany(Comments, {
+  foreignKey: "news_id",
+  as: "comments",
+});
+Comments.belongsTo(News, {
+  foreignKey: "news_id",
+  targetKey: "id",
+  as: "news",
+});
+
+// News & Recommendation
+News.hasOne(Recommendation, {
+  foreignKey: "news_id",
+});
+Recommendation.belongsTo(News, {
+  foreignKey: "news_id",
+  targetKey: "id",
+});
+
+// // News and Trending
+News.hasOne(Trendings, {
+  foreignKey: "news_id",
+});
+Trendings.belongsTo(News, {
+  foreignKey: "news_id",
+  targetKey: "id",
+});
+
 (async () => {
-  await sequelize.sync({ alter: true });
+  await sequelize.sync();
 })();
 
-export { sequelize, News, Categories, Comments, Recommendation, Trending };
+export { sequelize, News, Categories, Comments, Recommendation, Trendings };

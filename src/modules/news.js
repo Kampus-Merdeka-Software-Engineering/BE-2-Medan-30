@@ -2,8 +2,15 @@ import newsData from "../dummy/news.json" assert { type: "json" };
 import recommendationData from "../dummy/recommendation.json" assert { type: "json" };
 import trendingData from "../dummy/trending.json" assert { type: "json" };
 import { sortCreatedAt } from "../utils/date.js";
-import { Categories, News } from "./database.js";
+import {
+  Categories,
+  News,
+  Comments,
+  Recommendation,
+  Trendings,
+} from "./database.js";
 import { slugify } from "../utils/string.js";
+import { Sequelize } from "sequelize";
 
 export const createNews = async ({
   title,
@@ -52,6 +59,10 @@ export const getNews = async ({ category_id, limit }) => {
     ],
   });
 
+  if (!news) {
+    return "News Not Found!";
+  }
+
   return news;
 };
 
@@ -59,6 +70,58 @@ export const getNewsByID = async (news_id) => {
   let news = await News.findOne({
     where: {
       id: news_id,
+    },
+    include: [
+      {
+        model: Categories,
+        as: "category",
+      },
+      {
+        model: Comments,
+        as: "comments",
+      },
+    ],
+  });
+
+  if (!news) {
+    return "News Not Found!";
+  }
+
+  return news;
+};
+
+export const getNewsBySlug = async (slug) => {
+  let news = await News.findOne({
+    where: {
+      slug: slug,
+    },
+    include: [
+      {
+        model: Categories,
+        as: "category",
+      },
+      {
+        model: Comments,
+        as: "comments",
+      },
+    ],
+  });
+
+  if (!news) {
+    return "News Not Found!";
+  }
+
+  return news;
+};
+
+export const getNewsSearchByTitle = async ({ keyword, limit }) => {
+  let news = await News.findAll({
+    order: [["createdAt", "DESC"]],
+    limit: limit || 25,
+    where: {
+      title: {
+        [Sequelize.Op.like]: `%${keyword || ""}%`,
+      },
     },
     include: [
       {
@@ -75,61 +138,41 @@ export const getNewsByID = async (news_id) => {
   return news;
 };
 
-export const getNewsBySlug = (slug) => {
-  const news = newsData.find((news) => news.slug === slug);
+export const getRecommendationNews = async ({ category_id = 0 }) => {
+  const recommendedNews = await Recommendation.findOne({
+    where: {
+      category_id: category_id,
+    },
+    include: [
+      {
+        model: News,
+        include: [{ model: Categories, as: "category" }],
+      },
+    ],
+  });
 
-  if (!news) {
-    return "News Not Found!";
-  }
-
-  return news;
-};
-
-export const getNewsSearchByTitle = ({ keyword, limit }) => {
-  const news = newsData.filter((news) =>
-    news.title.toLowerCase().includes(keyword.toLowerCase())
-  );
-
-  if (!news) {
-    return `News with keyword "${keyword}" Not Found!`;
-  }
-
-  if (limit) {
-    news.slice(0, limit);
-  }
-
-  return news;
-};
-
-export const getRecommendationNews = ({ category_id = 0 }) => {
-  const recommendationNewsID = recommendationData.find(
-    (recommendation) => recommendation.category_id === category_id
-  ).news_id;
-
-  if (!recommendationNewsID) {
+  if (!recommendedNews) {
     return "Recommendation With This Category Not Found!";
   }
 
-  const news = getNewsByID(recommendationNewsID);
-
-  return news;
+  return recommendedNews.toJSON().News;
 };
 
-export const getTrendingNews = ({ limit }) => {
-  let trendingNews = trendingData
-    .sort((a, b) => a.trending_rank - b.trending_rank)
-    .map((trending) => ({
-      ...trending,
-      news: getNewsByID(trending.news_id),
-    }));
+export const getTrendingNews = async ({ limit }) => {
+  const trendingNews = await Trendings.findAll({
+    order: [["trending_rank", "ASC"]],
+    limit: limit || 25,
+    include: [
+      {
+        model: News,
+        include: [{ model: Categories, as: "category" }],
+      },
+    ],
+  });
 
   if (!trendingNews) {
     return "Trending News Not Found!";
   }
 
-  if (limit) {
-    trendingNews = trendingNews.slice(0, limit);
-  }
-
-  return trendingNews;
+  return trendingNews.map((trending) => trending.toJSON().News);
 };

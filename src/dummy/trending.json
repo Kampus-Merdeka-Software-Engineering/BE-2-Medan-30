@@ -2,55 +2,46 @@
   {
     "id": 1,
     "news_id": 3,
-    "trending_rank": 1,
-    "created_at": "2023-11-19T12:15:00Z"
+    "trending_rank": 1
   },
   {
     "id": 2,
     "news_id": 10,
-    "trending_rank": 2,
-    "created_at": "2023-11-19T12:15:00Z"
+    "trending_rank": 2
   },
   {
     "id": 3,
     "news_id": 18,
-    "trending_rank": 3,
-    "created_at": "2023-11-19T12:15:00Z"
+    "trending_rank": 3
   },
   {
     "id": 4,
     "news_id": 8,
-    "trending_rank": 4,
-    "created_at": "2023-11-19T12:15:00Z"
+    "trending_rank": 4
   },
   {
     "id": 5,
     "news_id": 13,
-    "trending_rank": 5,
-    "created_at": "2023-11-19T12:15:00Z"
+    "trending_rank": 5
   },
   {
     "id": 6,
     "news_id": 15,
-    "trending_rank": 6,
-    "created_at": "2023-11-19T12:15:00Z"
+    "trending_rank": 6
   },
   {
     "id": 7,
     "news_id": 6,
-    "trending_rank": 7,
-    "created_at": "2023-11-19T12:15:00Z"
+    "trending_rank": 7
   },
   {
     "id": 8,
     "news_id": 19,
-    "trending_rank": 8,
-    "created_at": "2023-11-19T12:15:00Z"
+    "trending_rank": 8
   },
   {
     "id": 9,
     "news_id": 1,
-    "trending_rank": 9,
-    "created_at": "2023-11-19T12:15:00Z"
+    "trending_rank": 9
   }
 ]
