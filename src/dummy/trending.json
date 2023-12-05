@@ -1,47 +1,38 @@
 [
   {
-    "id": 1,
-    "news_id": 3,
+    "news_id": "e10f2f98-1621-4a33-976b-e0e4c60787d8",
     "trending_rank": 1
   },
   {
-    "id": 2,
-    "news_id": 10,
+    "news_id": "f994bcf3-b0f3-4463-b9cb-d7847df8ddfc",
     "trending_rank": 2
   },
   {
-    "id": 3,
-    "news_id": 18,
+    "news_id":  "189b14c3-0c3c-4709-968e-d31b4a980a9a",
     "trending_rank": 3
   },
   {
-    "id": 4,
-    "news_id": 8,
+    "news_id": "ea062242-c368-4ab9-80a2-ce56fa746ebf",
     "trending_rank": 4
   },
   {
-    "id": 5,
-    "news_id": 13,
+    "news_id": "ca748c81-9ef0-41af-8f43-925aae67ce43",
     "trending_rank": 5
   },
   {
-    "id": 6,
-    "news_id": 15,
+    "news_id": "3e28419a-5e4b-4a4e-ba35-bf2fa63016e2",
     "trending_rank": 6
   },
   {
-    "id": 7,
-    "news_id": 6,
+    "news_id": "1bc4b9bd-6701-4c2f-a17a-2661fcf3b866",
     "trending_rank": 7
   },
   {
-    "id": 8,
-    "news_id": 19,
+    "news_id": "9b034e8c-0e9a-4528-9320-51108589be60",
     "trending_rank": 8
   },
   {
-    "id": 9,
-    "news_id": 1,
+    "news_id": "c45cbb12-ad0d-4076-87dc-61d34b7ff8db",
     "trending_rank": 9
   }
 ]

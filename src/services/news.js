@@ -10,7 +10,7 @@ import { getCommentsByNewsID } from "../modules/comments.js";
 
 export const getNewsService = async (req, res) => {
   const news = await getNews({
-    category_id: Number(req.query.category_id),
+    category_id: req.query.category_id,
     limit: Number(req.query.limit),
   });
 
@@ -26,7 +26,7 @@ export const getNewsBySearchService = async (req, res) => {
 };
 
 export const getNewsByIDService = async (req, res) => {
-  const news = await getNewsByID(Number(req.params.news_id));
+  const news = await getNewsByID(req.params.news_id);
   res.send(news);
 };
 
@@ -37,7 +37,7 @@ export const getNewsBySlugService = async (req, res) => {
 
 export const getNewsCommentsService = async (req, res) => {
   const comments = await getCommentsByNewsID({
-    news_id: Number(req.params.id),
+    news_id: req.params.id,
     limit: Number(req.query.limit),
   });
   res.send(comments);

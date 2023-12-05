@@ -15,6 +15,6 @@ export const getCategoriesService = async (req, res) => {
 };
 
 export const getCategoryByIDService = async (req, res) => {
-  const category = await getCategoryByID(Number(req.params.id));
+  const category = await getCategoryByID(req.params.id);
   res.send(category);
 };
