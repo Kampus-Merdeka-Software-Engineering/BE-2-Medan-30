@@ -156,7 +156,7 @@ Recommendation.belongsTo(News, {
   targetKey: "id",
 });
 
-// // News and Trending
+// News and Trending
 News.hasOne(Trendings, {
   foreignKey: "news_id",
 });
