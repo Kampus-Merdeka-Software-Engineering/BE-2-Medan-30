@@ -1,13 +1,10 @@
-import newsData from "../dummy/news.json" assert { type: "json" };
-import recommendationData from "../dummy/recommendation.json" assert { type: "json" };
-import trendingData from "../dummy/trending.json" assert { type: "json" };
-import { sortCreatedAt } from "../utils/date.js";
 import {
   Categories,
   News,
   Comments,
   Recommendation,
   Trendings,
+  sequelize,
 } from "./database.js";
 import { slugify } from "../utils/string.js";
 import { Sequelize } from "sequelize";
@@ -19,7 +16,7 @@ export const createNews = async ({
   thumbnail_description,
   content,
 }) => {
-  const newNews = News.build({
+  const newNews = News.create({
     title,
     slug: slugify(title),
     category_id,
@@ -81,6 +78,7 @@ export const getNewsByID = async (news_id) => {
         as: "comments",
       },
     ],
+    order: [[sequelize.col("comments.createdAt"), "ASC"]],
   });
 
   if (!news) {
@@ -105,7 +103,10 @@ export const getNewsBySlug = async (slug) => {
         as: "comments",
       },
     ],
+    order: [[sequelize.col("comments.createdAt"), "ASC"]],
   });
+
+  console.log("udah di order");
 
   if (!news) {
     return "News Not Found!";
@@ -174,5 +175,8 @@ export const getTrendingNews = async ({ limit }) => {
     return "Trending News Not Found!";
   }
 
-  return trendingNews.map((trending) => trending.toJSON().News);
+  return trendingNews.map((trending) => ({
+    ...trending.toJSON().News,
+    trending_rank: trending.toJSON().trending_rank,
+  }));
 };

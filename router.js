@@ -3,6 +3,7 @@ import {
   getCategoryByIDService,
   createCategoriesBulkService,
 } from "./src/services/categories.js";
+import { createCommentServices } from "./src/services/comment.js";
 import { getHomepageService } from "./src/services/general.js";
 import {
   createNewsBulkService,
@@ -64,16 +65,11 @@ const router = [
     method: "get",
     handler: getCategoryByIDService,
   },
-  // {
-  //   path: "/comments/create/bulk",
-  //   method: "post",
-  //   handler: () => {},
-  // },
-  // {
-  //   path: "/comments/create",
-  //   method: "post",
-  //   handler: () => {},
-  // },
+  {
+    path: "/comments/create",
+    method: "post",
+    handler: createCommentServices,
+  },
   {
     path: "/recommendation/create/bulk",
     method: "post",
