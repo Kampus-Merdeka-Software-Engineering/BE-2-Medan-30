@@ -1,42 +1,46 @@
 [
   {
-    "id": 1,
     "category_id": 0,
-    "news_id": 5
+    "news_id": "32d2247-db42-4163-a1ae-18949d707702"
   },
   {
-    "id": 2,
-    "category_id": 1,
+    "category_id": "05fcd7a2-a64b-4b24-9eca-88c19b49b707",
     "news_id": 7
   },
   {
-    "id": 3,
-    "category_id": 2,
+    "category_id": "0bd9ed4e-8e0f-4481-b27d-96b41bf596a6",
     "news_id": 11
   },
   {
-    "id": 4,
-    "category_id": 3,
+    "category_id": "0ed94d77-4508-458d-b258-00131d188b2d",
     "news_id": 18
   },
   {
-    "id": 5,
-    "category_id": 4,
+    "category_id": "1abbfda1-c043-46a2-8953-42ce543c56ba",
     "news_id": 15
   },
   {
-    "id": 6,
-    "category_id": 5,
+    "category_id": "3c0ec664-91f6-4484-a65b-a58b30454240",
     "news_id": 5
   },
   {
-    "id": 7,
-    "category_id": 6,
+    "category_id": "7e5bf56f-9d38-44b5-8ad3-6be97780d30e",
     "news_id": 20
   },
   {
-    "id": 8,
-    "category_id": 7,
+    "category_id": "9cb3ef04-561c-4618-8a01-e4610d86a864",
+    "news_id": 5
+  },
+  {
+    "category_id": "bad3ffa0-2a7d-467c-a43a-4e957ae33323",
+    "news_id": 5
+  },
+  {
+    "category_id": "cb6e9aa5-6c62-40e7-8513-0d5e95fcec30",
+    "news_id": 5
+  },
+  {
+    "category_id": "eb3728fd-0a8b-4aa3-8382-a5e39b1dc771",
     "news_id": 5
   }
 ]

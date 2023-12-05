@@ -1,9 +1,12 @@
 [
-  {"id": 1, "name": "Health"},
-  {"id": 2, "name": "Science"},
-  {"id": 3, "name": "Arts"},
-  {"id": 4, "name": "Technology"},
-  {"id": 5, "name": "Food"},
-  {"id": 6, "name": "Environment"},
-  {"id": 7, "name": "Space"}
+  { "name": "Teknologi" },
+  { "name": "Olahraga" },
+  { "name": "Politik" },
+  { "name": "Kuliner" },
+  { "name": "Kesehatan" },
+  { "name": "Finansial" },
+  { "name": "Lifestyle" },
+  { "name": "Entertainment" },
+  { "name": "Travel" },
+  { "name": "Pendidikan" }
 ]
