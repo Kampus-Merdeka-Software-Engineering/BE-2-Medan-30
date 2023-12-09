@@ -6,7 +6,12 @@ import { sequelize } from "./src/modules/database.js";
 const app = express();
 const port = process.env.PORT || 3300;
 
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://kampus-merdeka-software-engineering.github.io",
+  })
+);
+
 app.use(express.json());
 
 router.forEach(({ path, method, handler }) => {

@@ -1,84 +1,90 @@
 import {
-  getCategoriesService,
-  getCategoryByIDService,
-  createCategoriesBulkService,
-} from "./src/services/categories.js";
-import { createCommentServices } from "./src/services/comment.js";
-import { getHomepageService } from "./src/services/general.js";
+  getCategoriesHandler,
+  getCategoryByIDHandler,
+  createCategoriesBulkHandler,
+} from "./src/handler/categories.js";
+import { createCommentHandler } from "./src/handler/comment.js";
+import { getHomepageHandler } from "./src/handler/general.js";
 import {
-  createNewsBulkService,
-  createNewsService,
-  getNewsByIDService,
-  getNewsBySearchService,
-  getNewsBySlugService,
-  getNewsCommentsService,
-  getNewsService,
-} from "./src/services/news.js";
-import { createRecommendationBulkService } from "./src/services/recommendation.js";
-import { createTrendingBulkService } from "./src/services/trending.js";
+  createNewsBulkHandler,
+  createNewsHandler,
+  getNewsByIDHandler,
+  getNewsBySearchHandler,
+  getNewsBySlugHandler,
+  getNewsCommentsHandler,
+  getNewsHandler,
+} from "./src/handler/news.js";
+import { createRecommendationBulkHandler } from "./src/handler/recommendation.js";
+import { createTrendingBulkHandler } from "./src/handler/trending.js";
 
 const router = [
+  // Homepage
   {
     path: "/homepage",
     method: "get",
-    handler: getHomepageService,
+    handler: getHomepageHandler,
   },
+  // News
   {
     path: "/news",
     method: "get",
-    handler: getNewsService,
+    handler: getNewsHandler,
   },
-  { path: "/news/create", method: "post", handler: createNewsService },
-  { path: "/news/create/bulk", method: "post", handler: createNewsBulkService },
+  { path: "/news/create", method: "post", handler: createNewsHandler },
+  { path: "/news/create/bulk", method: "post", handler: createNewsBulkHandler },
   {
     path: "/news/search",
     method: "get",
-    handler: getNewsBySearchService,
+    handler: getNewsBySearchHandler,
   },
   {
     path: "/news/:news_id",
     method: "get",
-    handler: getNewsByIDService,
+    handler: getNewsByIDHandler,
   },
   {
     path: "/news/slug/:slug",
     method: "get",
-    handler: getNewsBySlugService,
+    handler: getNewsBySlugHandler,
   },
   {
     path: "/news/:news_id/comments",
     method: "get",
-    handler: getNewsCommentsService,
+    handler: getNewsCommentsHandler,
   },
+  // Categories
   {
     path: "/categories",
     method: "get",
-    handler: getCategoriesService,
+    handler: getCategoriesHandler,
   },
   {
     path: "/categories/create/bulk",
     method: "post",
-    handler: createCategoriesBulkService,
+    handler: createCategoriesBulkHandler,
   },
   {
     path: "/categories/:id",
     method: "get",
-    handler: getCategoryByIDService,
+    handler: getCategoryByIDHandler,
   },
+  // Comment
   {
     path: "/comments/create",
     method: "post",
-    handler: createCommentServices,
+    handler: createCommentHandler,
   },
+  // Recommendation
   {
     path: "/recommendation/create/bulk",
     method: "post",
-    handler: createRecommendationBulkService,
+    handler: createRecommendationBulkHandler,
   },
+  // Trending
   {
     path: "/trending/create/bulk",
     method: "post",
-    handler: createTrendingBulkService,
+    handler: createTrendingBulkHandler,
   },
 ];
 

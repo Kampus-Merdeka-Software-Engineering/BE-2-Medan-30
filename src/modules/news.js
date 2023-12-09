@@ -106,8 +106,6 @@ export const getNewsBySlug = async (slug) => {
     order: [[sequelize.col("comments.createdAt"), "ASC"]],
   });
 
-  console.log("udah di order");
-
   if (!news) {
     return "News Not Found!";
   }
