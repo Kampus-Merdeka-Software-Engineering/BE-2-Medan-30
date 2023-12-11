@@ -2,9 +2,9 @@ import {
   getCategoriesHandler,
   getCategoryByIDHandler,
   createCategoriesBulkHandler,
-} from "./src/handler/categories.js";
-import { createCommentHandler } from "./src/handler/comment.js";
-import { getHomepageHandler } from "./src/handler/general.js";
+} from "./handler/categories.js";
+import { createCommentHandler } from "./handler/comment.js";
+import { getHomepageHandler } from "./handler/general.js";
 import {
   createNewsBulkHandler,
   createNewsHandler,
@@ -13,11 +13,11 @@ import {
   getNewsBySlugHandler,
   getNewsCommentsHandler,
   getNewsHandler,
-} from "./src/handler/news.js";
-import { createRecommendationBulkHandler } from "./src/handler/recommendation.js";
-import { createTrendingBulkHandler } from "./src/handler/trending.js";
+} from "./handler/news.js";
+import { createRecommendationBulkHandler } from "./handler/recommendation.js";
+import { createTrendingBulkHandler } from "./handler/trending.js";
 
-const router = [
+const routers = [
   // Homepage
   {
     path: "/homepage",
@@ -88,4 +88,4 @@ const router = [
   },
 ];
 
-export default router;
+export default routers;

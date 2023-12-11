@@ -1,6 +1,6 @@
 import express from "express";
 import cors from "cors";
-import router from "./router.js";
+import routers from "./src/routers.js";
 import { sequelize } from "./src/modules/database.js";
 
 const app = express();
@@ -14,7 +14,7 @@ app.use(
 
 app.use(express.json());
 
-router.forEach(({ path, method, handler }) => {
+routers.forEach(({ path, method, handler }) => {
   app[method](path, handler);
 });
 
